@@ -10,7 +10,7 @@ import 'app_pages.dart';
 class AppRoutes {
   static String initialRoute() {
     var storage = GetStorage();
-    bool login = storage.read(AppConstants.login);
+    bool? login = storage.read(AppConstants.login);
     print("Login $login");
     if (login) {
       return AppPages.home;
